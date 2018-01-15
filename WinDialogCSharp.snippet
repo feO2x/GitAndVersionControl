@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>WinDialog Code Behind</Title>
+      <Author>Kenny Pflug</Author>
+      <Shortcut>WinDialogCodeBehind</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[using System.Windows;
+
+namespace ConnectFour.WpfClient
+{
+    public sealed partial class WinDialog
+    {
+        public WinDialog()
+        {
+            InitializeComponent();
+        }
+
+        public WinDialog(string playerName) : this()
+        {
+            TextBlock.Text = $$"{playerName} won!";
+        }
+
+        private void QuitApplication(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+            Close();
+        }
+    }
+}]]>
+      </Code>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
